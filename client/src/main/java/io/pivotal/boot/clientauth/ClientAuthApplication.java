@@ -15,9 +15,9 @@ public class ClientAuthApplication {
 
 	static
 	{
-		System.setProperty("javax.net.ssl.trustStore", ClientAuthApplication.class.getClassLoader().getResource("client.jks").getFile());
+		System.setProperty("javax.net.ssl.trustStore", "/home/ec2-user/environment/boot-two-way-ssl-example/client/src/main/resources/client.jks");
 		System.setProperty("javax.net.ssl.trustStorePassword", KEYSTORE_PASSWORD);
-		System.setProperty("javax.net.ssl.keyStore", ClientAuthApplication.class.getClassLoader().getResource("client.jks").getFile());
+		System.setProperty("javax.net.ssl.keyStore", "/home/ec2-user/environment/boot-two-way-ssl-example/client/src/main/resources/client.jks");
 		System.setProperty("javax.net.ssl.keyStorePassword", KEYSTORE_PASSWORD);
 
 		javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(
